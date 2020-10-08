@@ -1,0 +1,35 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Serg",
+      "role": "admin"
+    },
+    {
+      "id": 2,
+      "name": "Kelly",
+      "role": "user"
+    }
+  ],
+  "room": [
+    {
+      "id": 1,
+      "roomName": "some room"
+    },
+    {
+      "roomName": "second room",
+      "id": 2
+    },
+    {
+      "roomName": "third room",
+      "id": 3
+    }
+  ],
+  "booking": {
+    "id": 1,
+    "userId": 1,
+    "roomId": 1,
+    "date": "some date",
+    "time": "some time"
+  }
+}
