@@ -1,8 +1,11 @@
 const URL_rooms_name_db = 'http://localhost:3000/room'
 
-$().ready(
+$().ready(() => {
     getRooms_db()
-);
+    $('.datepicker-here').datepicker({
+        minDate: new Date()
+    })
+});
 
 function getRooms_db() {
     fetch(URL_rooms_name_db).then(response => {
