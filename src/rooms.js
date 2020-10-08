@@ -17,6 +17,7 @@ function getRooms_db() {
             $('#user_room').append(allRooms)
             allRooms.text(data[index].roomName)
             console.log(data);
+            console.log(test);
         });
     })
 }
