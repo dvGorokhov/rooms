@@ -9,11 +9,6 @@
       "id": 2,
       "name": "Kelly",
       "role": "user"
-    },
-    {
-      "name": "dasdas",
-      "role": "user",
-      "id": 3
     }
   ],
   "room": [
@@ -30,11 +25,20 @@
       "id": 3
     }
   ],
-  "booking": {
-    "id": 1,
-    "userId": 1,
-    "roomId": 1,
-    "date": "some date",
-    "time": "some time"
-  }
+  "booking": [
+    {
+      "userId": 1,
+      "roomId": "1",
+      "date": "09.10.2020",
+      "time": "17:00",
+      "id": 3
+    },
+    {
+      "userId": 2,
+      "roomId": "1",
+      "date": "10.10.2020",
+      "time": "16:00",
+      "id": 3
+    }
+  ]
 }
