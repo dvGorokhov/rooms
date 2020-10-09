@@ -27,25 +27,18 @@
   ],
   "booking": [
     {
-      "id": 1,
       "userId": 1,
-      "roomId": 1,
-      "date": "some date",
-      "time": "some time"
+      "roomId": "1",
+      "date": "09.10.2020",
+      "time": "17:00",
+      "id": 3
     },
     {
-      "id": 2,
-      "userId": 1,
-      "roomId": 1,
-      "date": "some date",
-      "time": "some time"
-    },
-    {
-      "id": 3,
       "userId": 3,
-      "roomId": 3,
-      "date": "some date",
-      "time": "some time"
+      "roomId": "1",
+      "date": "10.10.2020",
+      "time": "16:30",
+      "id": 4
     }
   ]
 }
