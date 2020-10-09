@@ -82,12 +82,14 @@ function show_time() {
             pref_m = '0'
         }
 
+        let text_btn = 'booking'
         let time = pref + h + ':' + pref_m + m
         let user_class = ''
         select_date.forEach(elem => {
             if (elem.time == time) {
                 if (elem.userId == user.id) {
                     user_class = 'yellow'
+                    text_btn = 'cancel'
                 } else {
                     user_class = 'red'
                 }
@@ -97,14 +99,23 @@ function show_time() {
         let item_time = $('<div>')
         item_time.addClass('mt-3 ' + user_class)
         item_time.append($('<span>' + time + '</span>'))
-        let item_booking = $('<button>')
-        item_booking.addClass('booking_time btn btn-primary btn-sm ml-5 mb-1')
-        item_booking.text('booking')
         $('#see_date').append(item_time)
-        $(item_time).append(item_booking)
+
+        if (user_class != 'red') {
+            let item_booking = $('<button>')
+            item_booking.addClass('booking_time btn btn-primary btn-sm ml-5 mb-1')
+            item_booking.text(text_btn)
+            $(item_time).append(item_booking)
+        }
     }
     $('.booking_time').on('click', function () {
-        addDateTimeBooking(this)
+        if (this.textContent == 'booking') {
+            addDateTimeBooking(this)
+        }
+        else {
+            delDateTimeBooking(this)
+        }
+
     })
 }
 
@@ -128,6 +139,33 @@ function addDateTimeBooking(e) {
         show_time()
     });
 
+}
+
+function delDateTimeBooking(e) {
+    let id = null
+    let time = $(e).parent().children('span').text()
+    select_date.forEach(elem => {
+        if (elem.time == time) {
+            id = elem.id
+        }
+    })
+    fetch(URL_booking_room + '/' + id, {
+        method: 'DELETE',
+        headers: {
+            'Content-type': 'application/json'
+        },
+    }).then(response => {
+        return response.json()
+    }).then(data => {
+        booking.forEach((elem, index) => {
+            if (elem.id == id) {
+                booking.splice(index, 1)
+            }
+        })
+        show_time()
+    }).catch(err => {
+        console.error(err)
+    })
 }
 
 function show_calendar(id, text) {
