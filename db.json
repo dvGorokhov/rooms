@@ -9,12 +9,17 @@
       "id": 2,
       "name": "Kelly",
       "role": "user"
+    },
+    {
+      "name": "Ivan",
+      "role": "user",
+      "id": 3
     }
   ],
   "room": [
     {
       "id": 1,
-      "roomName": "some room"
+      "roomName": "first room"
     },
     {
       "roomName": "second room",
@@ -31,14 +36,28 @@
       "roomId": "1",
       "date": "09.10.2020",
       "time": "17:00",
+      "id": 1
+    },
+    {
+      "userId": 1,
+      "roomId": 3,
+      "date": "13.10.2020",
+      "time": "14:30",
+      "id": 2
+    },
+    {
+      "userId": 1,
+      "roomId": 3,
+      "date": "13.10.2020",
+      "time": "15:00",
       "id": 3
     },
     {
-      "userId": 2,
-      "roomId": "1",
-      "date": "10.10.2020",
-      "time": "16:00",
-      "id": 3
+      "userId": 1,
+      "roomId": 1,
+      "date": "13.10.2020",
+      "time": "14:30",
+      "id": 4
     }
   ]
 }

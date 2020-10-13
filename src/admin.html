@@ -7,12 +7,8 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
         integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-
-    <style>
-        .users {
-            padding: initial;
-        }
-    </style>
+    <link href="/dist/css/datepicker.min.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="style.css">
     <title>admin</title>
 </head>
 
@@ -27,47 +23,18 @@
                                 class="fa fa-paper-plane" aria-hidden="true"></i></button>
                     </div>
                     <div class="card-body">
-                        <h5 class="card-title">new room:</h5>
+                        <h5 class="card-title mt-5">new room:</h5>
                         <div class="card-text row" id="rooms_list">
                         </div>
                     </div>
                 </div>
             </div>
 
-
             <div class="col-7 text-center">
-                calendar
-                <div class="card-groups row">
-                    <!-- карточка №1 -->
-                    <div class="card users col-5 mr-1 mb-1">
-                        <div class="card-body">
-                            <h4 class="card-title">name</h4>
-                            <p class="card-text">date.time</p>
-                            <button>ok</button>
-                            <button>del</button>
-                            <button>cancel</button>
-                        </div>
-                    </div>
-                    <!-- карточка №2 -->
-                    <div class="card users col-5 mr-1 mb-1">
-                        <div class="card-body">
-                            <h4 class="card-title">name</h4>
-                            <p class="card-text">date.time</p>
-                            <button>ok</button>
-                            <button>del</button>
-                            <button>cancel</button>
-                        </div>
-                    </div>
-                    <!-- карточка №3 -->
-                    <div class="card users col-5 mr-1 mb-1">
-                        <div class="card-body">
-                            <h4 class="card-title">name</h4>
-                            <p class="card-text">date.time</p>
-                            <button>ok</button>
-                            <button>del</button>
-                            <button>cancel</button>
-                        </div>
-                    </div>
+                <h5 class="card-title text-center room_name">Запись на ноготочки</h5>
+                <div class="datepicker-here my-1"></div>
+                <div id="see_date">
+
                 </div>
             </div>
         </div>
@@ -82,7 +49,8 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
         integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
         crossorigin="anonymous"></script>
-    <script src="admin.js"></script>
+    <script src="/dist/js/datepicker.min.js"></script>
+    <script src="functions.js"></script>
 </body>
 
 </html>
